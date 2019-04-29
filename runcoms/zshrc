@@ -5,9 +5,18 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
+#export TERM="xterm-256color"
+
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+if [[ -s "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]]; then
+  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+
 # Customize to your needs...
+
+. ~/personal/sh/zshrc
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
